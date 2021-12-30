@@ -1,0 +1,17 @@
+[FluxFlixService]-.->[Movie]
+[MovieRepository]-.->[Movie]
+[FluxFlixService]-.->[MovieEvent]
+[FluxFlixService]->[MovieRepository]
+[MovieRestController]->[FluxFlixService]
+[MovieRestController]-.->[Movie]
+[MovieRestController]-.->[MovieEvent]
+[client]-.->[Movie]
+[client]-.->[MovieEvent]
+[client]-.->[MovieRestController]
+
+
+[client]-.->[core]
+[webapp]-.->[core]
+[service]-.->[core]
+[webapp]-.->[service]
+[client]-.->[webapp]
